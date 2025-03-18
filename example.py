@@ -76,10 +76,10 @@ def sort_using_algorithm(data, algorithm):
         return shell_sort(data)
     elif algorithm == 3:
         return selection_sort(data)
-    #elif algorithm == 4:
-    #    return heap_sort(data)
-    #elif algorithm == 5:
-    #    return quick_sort_left_pivot(data)
+    elif algorithm == 4:
+        return heap_sort(data)
+    elif algorithm == 5:
+        return quick_sort_left_pivot(data)
     #elif algorithm == 6:
     #    return quick_sort_random_pivot(data)
     

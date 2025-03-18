@@ -29,8 +29,8 @@ declare -A algorithm_mapping=(
     ["insertion_sort"]=1
     ["shell_sort"]=2
     ["selection_sort"]=3
-    # ["heap_sort"]=4
-    # ["quick_sort_left_pivot"]=5
+    ["heap_sort"]=4
+    ["quick_sort_left_pivot"]=5
     # ["quick_sort_random_pivot"]=6
 )
 
