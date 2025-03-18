@@ -1,5 +1,5 @@
 import sys
-# test2
+
 def insertion_sort (data):
     for i in range(1, len(data)):
         key = data[i]
@@ -9,8 +9,7 @@ def insertion_sort (data):
             j -= 1
         data[j + 1] = key
     return data
-#abce
-#def shell_sort():
+#def agitshell_sort():
 #    
 #def selection_sort():
 #
