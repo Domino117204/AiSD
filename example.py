@@ -32,10 +32,40 @@ def selection_sort(data):
             if data[i] < data[min]:
                 min = i
         data[j], data[min] = data[min], data[j]
+    return data
 
-#def heap_sort():
+def heap(data,n,i):
+    largest=i
+    left = 2*i+1
+    right = 2*i+2
 
-#def quick_sort_left_pivot():
+    if left<n and data[left]>data[largest]:
+        largest = left
+    if right<n and data[right]>data[largest]:
+        largest=right
+    if largest !=i:
+        data[i], data[largest]=data[largest],data[i]
+        heap(data, n, largest)
+
+def heap_sort(data):
+    n = len(data)
+
+    for i in range(n // 2 - 1, -1, -1):  
+        heap(data, n, i)
+
+    for i in range(n - 1, 0, -1):
+        data[i], data[0] = data[0], data[i]
+        heap(data, i, 0)
+
+    return data
+
+def quick_sort_left_pivot(data):
+    if len(data) <= 1:
+        return data
+    pivot = data[0]
+    left = [x for x in data[1:] if x <= pivot]
+    right = [x for x in data[1:] if x > pivot]
+    return quick_sort_left_pivot(left) + [pivot] + quick_sort_left_pivot(right)
 
 #def quick_sort_random_pivot():
 
