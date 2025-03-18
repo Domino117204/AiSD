@@ -31,7 +31,7 @@ declare -A algorithm_mapping=(
     ["selection_sort"]=3
     ["heap_sort"]=4
     ["quick_sort_left_pivot"]=5
-    # ["quick_sort_random_pivot"]=6
+    ["quick_sort_random_pivot"]=6
 )
 
 # Create a reverse mapping from numbers to algorithm names
