@@ -63,9 +63,17 @@ def heap_sort(data):
 def quick_sort_left_pivot(data):
     if len(data) <= 1:
         return data
+
     pivot = data[0]
-    left = [x for x in data[1:] if x <= pivot]
-    right = [x for x in data[1:] if x > pivot]
+    left = []
+    right = []
+
+    for x in data[1:]:
+        if x <= pivot:
+            left.append(x)
+        else:
+            right.append(x)
+
     return quick_sort_left_pivot(left) + [pivot] + quick_sort_left_pivot(right)
 
 def quick_sort_random_pivot(data):
