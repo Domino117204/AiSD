@@ -11,7 +11,13 @@ def insertion_sort (data):
     return data
 #def agitshell_sort():
 #    
-#def selection_sort():
+def selection_sort():
+    for j in range(1, len(data)-1):
+        min = j
+        for j in range(j+1, n):
+            if data[i] < data[min]:
+                min = i
+        data[min] = data[j]
 #
 #def heap_sort():
 #
@@ -32,6 +38,7 @@ def sort_using_algorithm(data, algorithm):
     #    return quick_sort_left_pivot(data)
     #elif algorithm == 6:
     #    return quick_sort_random_pivot(data)
+    
 
 def main():
     # Command-line arguments: python script.py --algorithm <algorithm_number>

@@ -1,58 +1,4 @@
 Algorithm,InputSize,Time
-shell_sort,4,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.21
-shell_sort,8,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-shell_sort,16,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-shell_sort,32,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-shell_sort,64,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-shell_sort,128,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-shell_sort,256,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.14
-shell_sort,512,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.12
-shell_sort,1024,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-shell_sort,2048,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-shell_sort,4096,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-shell_sort,8192,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.14
-shell_sort,16384,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.14
-shell_sort,32768,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.15
-shell_sort,65536,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.15
-shell_sort,131072,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.17
-shell_sort,262144,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.21
-shell_sort,524288,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.28
-quick_sort_random_pivot,4,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,8,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,16,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,32,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,64,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,128,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,256,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,512,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,1024,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,2048,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,4096,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,8192,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-quick_sort_random_pivot,16384,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.14
-quick_sort_random_pivot,32768,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.14
-quick_sort_random_pivot,65536,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.16
-quick_sort_random_pivot,131072,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.17
-quick_sort_random_pivot,262144,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.21
-quick_sort_random_pivot,524288,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.28
-selection_sort,4,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.16
-selection_sort,8,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,16,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,32,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,64,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,128,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,256,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,512,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,1024,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,2048,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,4096,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,8192,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,16384,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.13
-selection_sort,32768,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.14
-selection_sort,65536,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.15
-selection_sort,131072,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.16
-selection_sort,262144,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.22
-selection_sort,524288,Traceback (most recent call last): File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 56, in <module> main() File "/mnt/c/Users/domin/Documents/AiSD/zad1/./example.py", line 53, in main print("Sorted data:", sorted_data[0:10]) ~~~~~~~~~~~^^^^^^ TypeError: 'NoneType' object is not subscriptable Command exited with non-zero status 1 0.27
 insertion_sort,4,0.03
 insertion_sort,8,0.03
 insertion_sort,16,0.03
@@ -62,10 +8,69 @@ insertion_sort,128,0.03
 insertion_sort,256,0.03
 insertion_sort,512,0.04
 insertion_sort,1024,0.05
+insertion_sort,2048,0.13
+insertion_sort,4096,0.39
+insertion_sort,8192,1.16
+insertion_sort,16384,4.15
+insertion_sort,32768,17.76
+insertion_sort,65536,72.38
+insertion_sort,4,0.02
+insertion_sort,8,0.02
+insertion_sort,16,0.02
+insertion_sort,32,0.02
+insertion_sort,64,0.02
+insertion_sort,128,0.02
+insertion_sort,256,0.02
+insertion_sort,512,0.02
+insertion_sort,1024,0.03
+insertion_sort,2048,0.02
+insertion_sort,4096,0.02
+insertion_sort,8192,0.02
+insertion_sort,16384,0.02
+insertion_sort,32768,0.03
+insertion_sort,65536,0.04
+insertion_sort,4,0.02
+insertion_sort,8,0.02
+insertion_sort,16,0.02
+insertion_sort,32,0.02
+insertion_sort,64,0.02
+insertion_sort,128,0.02
+insertion_sort,256,0.02
+insertion_sort,512,0.03
+insertion_sort,1024,0.05
+insertion_sort,2048,0.14
+insertion_sort,4096,0.51
+insertion_sort,8192,2.08
+insertion_sort,16384,7.97
+insertion_sort,32768,32.00
+insertion_sort,65536,128.36
+insertion_sort,4,0.02
+insertion_sort,8,0.02
+insertion_sort,16,0.02
+insertion_sort,32,0.02
+insertion_sort,64,0.02
+insertion_sort,128,0.02
+insertion_sort,256,0.02
+insertion_sort,512,0.02
+insertion_sort,1024,0.02
+insertion_sort,2048,0.02
+insertion_sort,4096,0.02
+insertion_sort,8192,0.02
+insertion_sort,16384,0.02
+insertion_sort,32768,0.02
+insertion_sort,65536,0.03
+insertion_sort,4,0.02
+insertion_sort,8,0.02
+insertion_sort,16,0.02
+insertion_sort,32,0.02
+insertion_sort,64,0.02
+insertion_sort,128,0.02
+insertion_sort,256,0.02
+insertion_sort,512,0.02
+insertion_sort,1024,0.03
 insertion_sort,2048,0.09
 insertion_sort,4096,0.27
-insertion_sort,8192,0.98
-insertion_sort,16384,3.90
-insertion_sort,32768,16.53
-insertion_sort,65536,67.00
-insertion_sort,131072,275.67
+insertion_sort,8192,1.02
+insertion_sort,16384,4.03
+insertion_sort,32768,15.93
+insertion_sort,65536,64.17
