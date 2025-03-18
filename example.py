@@ -9,20 +9,33 @@ def insertion_sort (data):
             j -= 1
         data[j + 1] = key
     return data
-#def agitshell_sort():
-#    
-def selection_sort():
-    for j in range(1, len(data)-1):
+def shell_sort(data):
+    n=len(data)
+    gap = n//2
+    while gap>0:
+        for i in range(gap, n):
+            temp=data[i]
+            j=i
+            while j>=gap and data[j-gap]> temp:
+                data[j]=data[j-gap]
+                j-=gap
+            data[j]=temp
+        gap//=2
+    return data
+ 
+def selection_sort(data):
+    n=len(data)
+    for j in range(n-1):
         min = j
-        for j in range(j+1, n):
+        for i in range(j+1, n):
             if data[i] < data[min]:
                 min = i
-        data[min] = data[j]
-#
+        data[j], data[min] = data[min], data[j]
+
 #def heap_sort():
-#
+
 #def quick_sort_left_pivot():
-#
+
 #def quick_sort_random_pivot():
 
 def sort_using_algorithm(data, algorithm):
