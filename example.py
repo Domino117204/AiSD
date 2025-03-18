@@ -1,4 +1,5 @@
 import sys
+import random
 
 def insertion_sort (data):
     for i in range(1, len(data)):
@@ -67,7 +68,27 @@ def quick_sort_left_pivot(data):
     right = [x for x in data[1:] if x > pivot]
     return quick_sort_left_pivot(left) + [pivot] + quick_sort_left_pivot(right)
 
-#def quick_sort_random_pivot():
+def quick_sort_random_pivot(data):
+    if len(data) <= 1:
+        return data
+    
+    pivot_index = random.randint(0, len(data) - 1)
+    pivot = data[pivot_index]
+    
+    left = []
+    middle = []
+    right = []
+    
+    for i, x in enumerate(data):
+        if i == pivot_index:
+            middle.append(x)
+        elif x < pivot:
+            left.append(x)
+        elif x > pivot:
+            right.append(x)
+    
+    return quick_sort_random_pivot(left) + middle + quick_sort_random_pivot(right)
+
 
 def sort_using_algorithm(data, algorithm):
     if algorithm == 1:
@@ -80,8 +101,8 @@ def sort_using_algorithm(data, algorithm):
         return heap_sort(data)
     elif algorithm == 5:
         return quick_sort_left_pivot(data)
-    #elif algorithm == 6:
-    #    return quick_sort_random_pivot(data)
+    elif algorithm == 6:
+        return quick_sort_random_pivot(data)
     
 
 def main():
