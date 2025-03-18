@@ -9,6 +9,7 @@ def insertion_sort (data):
             j -= 1
         data[j + 1] = key
     return data
+
 def shell_sort(data):
     n=len(data)
     gap = n//2
@@ -41,10 +42,10 @@ def selection_sort(data):
 def sort_using_algorithm(data, algorithm):
     if algorithm == 1:
         return insertion_sort(data)
-    #elif algorithm == 2:
-    #    return shell_sort(data)
-    #elif algorithm == 3:
-    #    return selection_sort(data)
+    elif algorithm == 2:
+        return shell_sort(data)
+    elif algorithm == 3:
+        return selection_sort(data)
     #elif algorithm == 4:
     #    return heap_sort(data)
     #elif algorithm == 5:
