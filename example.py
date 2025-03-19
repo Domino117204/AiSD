@@ -1,6 +1,8 @@
 import sys
 import random
 
+sys.setrecursionlimit(10**6) 
+
 def insertion_sort (data):
     for i in range(1, len(data)):
         key = data[i]

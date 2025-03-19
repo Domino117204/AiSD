@@ -20,7 +20,16 @@ benchmark() {
     echo $time
     size=$(head -n 1 $input_file)
     # Append results to CSV file
-    echo "$algorithm_name,$size,$time" >> benchmark_results.csv
+    #echo "$algorithm_name,$size,$time" >> benchmark_results.csv
+    output_file="benchmark_results_${algorithm_name}.csv"
+
+    # Jeśli plik jeszcze nie istnieje, dodaj nagłówek
+    if [[ ! -f $output_file ]]; then
+        echo "Algorithm,InputSize,Time" > $output_file
+    fi
+
+    # Append results to the algorithm-specific CSV file
+    echo "$algorithm_name,$size,$time" >> $output_file
     echo "------------------------"
 }
 
@@ -47,7 +56,7 @@ input_files=("random_array" "increasing_array" "decreasing_array" "constant_arra
 #input_files=("random_array")
 
 # Create or clear the CSV file
-echo "Algorithm,InputSize,Time" > benchmark_results.csv
+# echo "Algorithm,InputSize,Time" > benchmark_results.csv
 
 # Run the benchmark for each input file, sorting algorithm, and size
 for input_type in "${input_files[@]}"; do
