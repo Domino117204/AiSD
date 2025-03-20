@@ -1,0 +1,16 @@
+Algorithm,InputSize,Time
+insertion_sort,4,0.02
+insertion_sort,8,0.02
+insertion_sort,16,0.02
+insertion_sort,32,0.02
+insertion_sort,64,0.02
+insertion_sort,128,0.02
+insertion_sort,256,0.02
+insertion_sort,512,0.03
+insertion_sort,1024,0.04
+insertion_sort,2048,0.08
+insertion_sort,4096,0.27
+insertion_sort,8192,1.00
+insertion_sort,16384,3.89
+insertion_sort,32768,15.63
+insertion_sort,65536,62.31

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p results
+
 # Function to run the script and measure execution time
 benchmark() {
     input_file=$1
@@ -21,7 +23,8 @@ benchmark() {
     size=$(head -n 1 $input_file)
     # Append results to CSV file
     #echo "$algorithm_name,$size,$time" >> benchmark_results.csv
-    output_file="benchmark_results_${algorithm_name}.csv"
+    output_file="results/${algorithm_name}_${input_type}.csv"
+
 
     # Jeśli plik jeszcze nie istnieje, dodaj nagłówek
     if [[ ! -f $output_file ]]; then
