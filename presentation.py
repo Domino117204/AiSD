@@ -14,10 +14,27 @@ def insertion_sort(data):
         data[j + 1] = key
     return data
 
+def sedgewick_gaps(n):
+    gaps = []
+    k = 0
+    while True:
+        if k % 2 == 0:
+            gap = 9 * (2 ** k) - 9 * (2 ** (k // 2)) + 1
+        else:
+            gap = 4 ** k + 3 * 2 ** (k - 1) + 1
+        
+        if gap >= n:
+            break
+        gaps.append(gap)
+        k += 1
+
+    return gaps[::-1]
+
 def shell_sort(data):
     n = len(data)
-    gap = n // 2
-    while gap > 0:
+    gaps = sedgewick_gaps(n)
+    
+    for gap in gaps:
         for i in range(gap, n):
             temp = data[i]
             j = i
@@ -25,7 +42,16 @@ def shell_sort(data):
                 data[j] = data[j - gap]
                 j -= gap
             data[j] = temp
-        gap //= 2
+
+ 
+def selection_sort(data):
+    n=len(data)
+    for j in range(n-1):
+        min = j
+        for i in range(j+1, n):
+            if data[i] < data[min]:
+                min = i
+        data[j], data[min] = data[min], data[j]
     return data
 
 def selection_sort(data):
