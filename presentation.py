@@ -42,6 +42,7 @@ def shell_sort(data):
                 data[j] = data[j - gap]
                 j -= gap
             data[j] = temp
+    return data
 
  
 def selection_sort(data):
