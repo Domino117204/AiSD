@@ -44,16 +44,6 @@ def shell_sort(data):
             data[j] = temp
     return data
 
- 
-def selection_sort(data):
-    n=len(data)
-    for j in range(n-1):
-        min = j
-        for i in range(j+1, n):
-            if data[i] < data[min]:
-                min = i
-        data[j], data[min] = data[min], data[j]
-    return data
 
 def selection_sort(data):
     n = len(data)
