@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.25)  26 MAR 2025 10:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.19)  26 MAR 2025 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./Sprawozdanie.tex
 (Sprawozdanie.tex
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+LaTeX2e <2024-11-01>
+L3 programming layer <2024-11-02>
 (C:\Users\domin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
 (C:\Users\domin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
@@ -510,7 +510,7 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 (C:\Users\domin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count299
 \Gm@cntv=\count300
@@ -656,25 +656,25 @@ PGFPlots: reading {results/quick_sort_random_pivot_random_array.csv}
 {C:/Users/domin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (Sprawozdanie.aux)
  ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+LaTeX2e <2024-11-01>
+L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22920 strings out of 473523
- 614735 string characters out of 5714630
- 1204024 words of memory out of 5000000
- 45772 multiletter control sequences out of 15000+600000
- 558837 words of font info for 36 fonts, out of 8000000 for 9000
+ 22917 strings out of 473682
+ 614745 string characters out of 5719215
+ 1204311 words of memory out of 5000000
+ 45625 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,21n,105p,728b,2233s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,21n,107p,728b,2233s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmr7.pfb><C:/Users/domin/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/domin/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Sprawozdanie.pdf (1 page, 64732 bytes).
+Output written on Sprawozdanie.pdf (1 page, 65157 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
