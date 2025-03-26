@@ -1,7 +1,7 @@
 import sys
 import random
 
-sys.setrecursionlimit(10**6) 
+sys.setrecursionlimit(10**8) 
 
 def insertion_sort (data):
     for i in range(1, len(data)):
@@ -79,21 +79,30 @@ def heap_sort(data):
 
     return data
 
-def quick_sort_left_pivot(data):
-    if len(data) <= 1:
-        return data
+def partition(A, p, r):
+    pivot = A[p]
+    i = p+1
+    j = r
 
-    pivot = data[0]
-    left = []
-    right = []
-
-    for x in data[1:]:
-        if x <= pivot:
-            left.append(x)
+    while True:
+        while i <= j and A[i] <= pivot:
+            i += 1
+        while i <= j and A[j] > pivot:
+            j -= 1
+        if i <= j:
+            A[i], A[j] = A[j], A[i]
         else:
-            right.append(x)
+            break
 
-    return quick_sort_left_pivot(left) + [pivot] + quick_sort_left_pivot(right)
+    A[p], A[j] = A[j], A[p]
+    return j
+
+def quick_sort_left_pivot(A, p, r):
+    if p < r:
+        q = partition(A, p, r)
+        quick_sort_left_pivot(A, p, q-1)
+        quick_sort_left_pivot(A, q+1, r)
+    return A
 
 def quick_sort_random_pivot(data):
     if len(data) <= 1:
@@ -127,7 +136,7 @@ def sort_using_algorithm(data, algorithm):
     elif algorithm == 4:
         return heap_sort(data)
     elif algorithm == 5:
-        return quick_sort_left_pivot(data)
+        return quick_sort_left_pivot(data, 0, len(data) - 1)
     elif algorithm == 6:
         return quick_sort_random_pivot(data)
     
