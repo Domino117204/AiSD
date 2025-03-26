@@ -13,4 +13,4 @@ quick_sort_left_pivot,4096,0.34
 quick_sort_left_pivot,8192,1.32
 quick_sort_left_pivot,16384,5.65
 quick_sort_left_pivot,32768,22.79
-quick_sort_left_pivot,65536,Command terminated by signal 9 50.19
+quick_sort_left_pivot,65536,50.19

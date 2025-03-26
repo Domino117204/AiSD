@@ -1,0 +1,138 @@
+\documentclass{article}
+%Tworzenie wykresów bezpośrednio w LaTeXu
+\usepackage{pgfplots}
+%Pozwala dodać opcję H dlo figur, dzięki czemu mamy absolutną kontrolę gdzie się mają pojawić
+\usepackage{float}
+%Ustawianie marginesu 1 cal lub 0.5 cala to najlepsza opcja. Standardowe 1.5 cala nadaje się dla książek ale dla sprawozdań już mniej
+\usepackage[margin=1in]{geometry}
+\pgfplotsset{
+	width=10cm, height=6cm, ymin=0, xmin=4, xmin=2047, xmax=65536, grid=both, %wymiary osi
+	xticklabel style={rotate=45, anchor=near xticklabel},  %liczby na osi X pod kątem 45*
+	x label style={at={(axis description cs:0.5,-0.025)}}, %legenda osi X wyśrodkowana, lekko obniżona
+}
+
+\begin{document}
+	%\section*{WYKRESY}
+	%Wykresy, obrazy itd, warto opakowywać w `figure`, dzięki czemu można dodać Caption\Opis do figury, jak i `label` dzięki któremu później można odwoływać się do figur np. ``
+	
+	
+	\begin{figure}[H]
+		\centering
+		\label{fig:enter-label}
+		%Tworzę "pojemnik" na wykres `pgfplots` tak żeby automatycznie wyskalował mi wygenerowany wykres na szerokość strony. 
+		\noindent\resizebox{\textwidth}{!}{
+			\begin{tikzpicture}
+				\begin{axis}[%
+					name=plotA, anchor=left of south west,
+					title={Złożoność Obliczeniowa Algorytmu Heap Sort}, 
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_a_shaped_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_constant_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_decreasing_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_increasing_array.csv};
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_random_array.csv};
+					\legend{A shaped, Constant, Decresing, Incresing, Random}
+				\end{axis}
+				
+				
+				%Prawy górny
+				\begin{axis}[%
+					title={Złożoność Obliczeniowa Algorytmu Insertion Sort}, 
+					name=plotB, at=(plotA.right of south east), anchor=left of south west,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_a_shaped_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_constant_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_decreasing_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_increasing_array.csv};
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_random_array.csv};
+					\legend{A shaped, Constant, Decresing, Incresing, Random}
+				\end{axis}
+				
+				
+				%Trzeci wykres
+				\begin{axis}[%
+					title={Złożoność Obliczeniowa Algorytmu Selection Sort}, 
+					name=plotD, at=(plotB.below south west), anchor=above north west,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_a_shaped_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_constant_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_decreasing_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_increasing_array.csv};
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_random_array.csv};
+					\legend{A shaped, Constant, Decresing, Incresing, Random}
+				\end{axis}
+				%Czwarty wykres
+				\begin{axis}[%
+					title={Złożoność Obliczeniowa Algorytmu Shell Sort}, 
+					name=plotC, at=(plotD.left of south west), anchor=right of south east,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_a_shaped_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_constant_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_decreasing_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_increasing_array.csv};
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_random_array.csv};
+					\legend{A shaped, Constant, Decresing, Incresing, Random}
+				\end{axis}
+				
+				
+				
+				
+				%Piaty wykres
+				\begin{axis}[%
+					title={Złożoność Obliczeniowa Algorytmu Quick Sort Left Pivot}, 
+					name=plotF, at=(plotD.below south west), anchor=above north west,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_a_shaped_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_a_shaped_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_decreasing_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_increasing_array.csv};
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_random_array.csv};
+					\legend{A shaped, Constant, Decresing, Incresing, Random}
+				\end{axis}
+				%Szosty wykres
+				\begin{axis}[%
+					title={Złożoność Obliczeniowa Algorytmu Quick Sort Random Pivot}, 
+					name=plotE, at=(plotF.left of south west), anchor=right of south east,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_a_shaped_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_constant_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_decreasing_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_increasing_array.csv};
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_random_array.csv};
+					\legend{A shaped, Constant, Decresing, Incresing, Random}
+				\end{axis}
+				
+			\end{tikzpicture}
+		}
+		\caption{Caption}
+	\end{figure}
+	
+	
+	
+	
+	
+\end{document}
