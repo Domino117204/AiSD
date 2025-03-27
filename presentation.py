@@ -77,22 +77,50 @@ def heap_sort(data):
         heap(data, i, 0)
     return data
 
-def quick_sort_left_pivot(data):
-    if len(data) <= 1:
-        return data
-    pivot = data[0]
-    left = [x for x in data[1:] if x <= pivot]
-    right = [x for x in data[1:] if x > pivot]
-    return quick_sort_left_pivot(left) + [pivot] + quick_sort_left_pivot(right)
+def partition(A, p, r):
+    pivot = A[p]
+    i = p+1
+    j = r
+
+    while True:
+        while i <= j and A[i] <= pivot:
+            i += 1
+        while i <= j and A[j] > pivot:
+            j -= 1
+        if i <= j:
+            A[i], A[j] = A[j], A[i]
+        else:
+            break
+
+    A[p], A[j] = A[j], A[p]
+    return j
+
+def quick_sort_left_pivot(A, p, r):
+    if p < r:
+        q = partition(A, p, r)
+        quick_sort_left_pivot(A, p, q-1)
+        quick_sort_left_pivot(A, q+1, r)
+    return A
 
 def quick_sort_random_pivot(data):
     if len(data) <= 1:
         return data
+    
     pivot_index = random.randint(0, len(data) - 1)
     pivot = data[pivot_index]
-    left = [x for x in data if x < pivot]
-    middle = [x for x in data if x == pivot]
-    right = [x for x in data if x > pivot]
+    
+    left = []
+    middle = []
+    right = []
+    
+    for i, x in enumerate(data):
+        if i == pivot_index:
+            middle.append(x)
+        elif x < pivot:
+            left.append(x)
+        elif x > pivot:
+            right.append(x)
+    
     return quick_sort_random_pivot(left) + middle + quick_sort_random_pivot(right)
 
 def sort_using_algorithm(data, algorithm):
@@ -105,7 +133,7 @@ def sort_using_algorithm(data, algorithm):
     elif algorithm == 4:
         return heap_sort(data)
     elif algorithm == 5:
-        return quick_sort_left_pivot(data)
+        return quick_sort_left_pivot(data, 0, len(data) - 1)
     elif algorithm == 6:
         return quick_sort_random_pivot(data)
     else:
@@ -128,10 +156,10 @@ def read_data_from_file(filename):
 
 #filename = input("Podaj nazwę pliku z danymi: ")
 typ_tabeli = input("Podaj typ tabeli do posortowania: a_shaped_array, constant_array, decreasing_array, increasing_array, random_array\n")
-ilosc = input("Podaj n - ilość elementów w tablicy (potęga 2 od 4 do 32768)\n")
-missing_zeros = 8 - len(ilosc)
-zeros = missing_zeros*"0"
-filename = "/mnt/c/users/oliwe/AiSD/AiSD/benchmark/"+typ_tabeli+"_"+zeros+ilosc+".txt"
+ilosc = input("Podaj n - ilość elementów w tablicy (potęga 2 od 4 do 65536)\n")
+missing_zeros = 8 - len(str(ilosc))
+zeros = missing_zeros * "0"
+filename = "benchmark/" + typ_tabeli + "_" + zeros + str(ilosc) + ".txt"
 data = read_data_from_file(filename)
 
 if data is not None:
