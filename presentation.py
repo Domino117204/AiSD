@@ -123,6 +123,17 @@ def quick_sort_random_pivot(data):
     
     return quick_sort_random_pivot(left) + middle + quick_sort_random_pivot(right)
 
+#def quick_sort(array, pivot_f):
+#    pivot = pivot_f(array)
+#    ...
+
+#def quick_sort_left(array):
+#    def left_pivot(array):
+#        return array[0]
+#    quick_sort(array, left_pivot)
+#
+#    quick_sort(array, lambda array : array [0] )
+
 def sort_using_algorithm(data, algorithm):
     if algorithm == 1:
         return insertion_sort(data)
