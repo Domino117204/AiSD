@@ -1,24 +1,347 @@
 \documentclass{article}
-%Tworzenie wykresów bezpośrednio w LaTeXu
-\usepackage{pgfplots}
-%Pozwala dodać opcję H dlo figur, dzięki czemu mamy absolutną kontrolę gdzie się mają pojawić
+
+% Pakiety wymagane do formatowania i grafiki
+\usepackage{geometry}  % Ustawienie marginesów
+\usepackage{graphicx}  % Wymagany do wstawiania obrazków
+\usepackage{xcolor}    % Kolorowy tekst
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{lmodern} 
 \usepackage{float}
-%Ustawianie marginesu 1 cal lub 0.5 cala to najlepsza opcja. Standardowe 1.5 cala nadaje się dla książek ale dla sprawozdań już mniej
-\usepackage[margin=1in]{geometry}
+\usepackage{pgfplots}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{listings}
+
+\usepackage{fancyhdr} % Pakiet do nagłówków i stopek
+\pagestyle{fancy} % Ustawienie niestandardowego stylu
+
+
+\fancyhead[L]{\includegraphics[width=10cm]{Image/PP-PUT-WORD.png}} % obraz w lewym górnym rogu
+
+
+\fancyfoot[C]{\thepage}
+
+\usepackage{tcolorbox}
+\definecolor{terminalColor}{RGB}{40, 42, 54}
+\definecolor{Button1}{RGB}{237, 106, 94}
+\definecolor{Button2}{RGB}{245, 191, 79}
+\definecolor{Button3}{RGB}{98, 188, 119}
+
+
+
 \pgfplotsset{
 	width=10cm, height=6cm, ymin=0, xmin=4, xmin=2047, xmax=65536, grid=both, %wymiary osi
 	xticklabel style={rotate=45, anchor=near xticklabel},  %liczby na osi X pod kątem 45*
 	x label style={at={(axis description cs:0.5,-0.025)}}, %legenda osi X wyśrodkowana, lekko obniżona
 }
 
+\renewcommand{\headrulewidth}{0pt} % Usunięcie linii w nagłówku
+\renewcommand{\footrulewidth}{0pt} % Cienka linia stopki
+
+% Marginesy strony
+\geometry{
+	a4paper,
+	left=20mm,
+	right=20mm,
+	top=30mm,
+	bottom=25mm,
+	headsep=20mm, % Odstęp między nagłówkiem a tekstem
+}
+
+
+% Formatowanie sekcji
+\titleformat{\section}{\LARGE\bfseries\centering}{}{0em}{}
+
 \begin{document}
+	
+	\lstset{
+		backgroundcolor=\color{black},  % Tło czarne
+		basicstyle=\ttfamily\color{white},  % Kolor tekstu biały
+		keywordstyle=\color{cyan},  % Kolor słów kluczowych na niebiesko
+		commentstyle=\color{gray},  % Kolor komentarzy na szaro
+		stringstyle=\color{green},  % Kolor ciągów znaków na zielono
+		showstringspaces=false,  % Nie pokazuj spacji w ciągach
+		tabsize=3,  % Rozmiar tabulacji
+		breaklines=true,  % Łamanie długich linii
+		frame=none,  % Bez ramki
+		xleftmargin=0cm,  % Margines po lewej stronie
+		xrightmargin=0cm,  % Margines po prawej stronie
+		aboveskip=0pt,  % Odstęp przed
+		belowskip=0pt,  % Odstęp po
+		columns=fullflexible,  % Kolumny elastyczne
+		linewidth=\linewidth  % Szerokość linii na pełną szerokość
+	}
+	
+	% Strona tytułowa
+	\thispagestyle{empty} % Brak nagłówków/stopek na pierwszej stronie
+	
+	\begin{center}
+		\includegraphics[width=6cm]{Image/PP-PUT-LOGO.png}
+		\vspace{1cm}
+		
+		{\Huge\bfseries Politechnika Poznańska}
+		
+		\vspace{1cm}
+		
+		{\large Informatyka rok I semestr 2} \\[0.3cm]
+		L10, Piątek 0:00 - 0:00
+		
+		\vspace{1.5cm}
+		
+		{\LARGE\bfseries Algorytmy i Struktury Danych} \\[0.3cm]
+		\textbf{Prowadzący:} Dominik Piotr Witczak
+		
+		\vspace{2cm}
+		
+		% Poprawione formatowanie
+		{\LARGE\bfseries Sprawozdanie nr 1} 
+		
+		\vspace{1cm}
+		
+		{\Large\bfseries Algorytmy Sortowania}
+		
+		\vspace{3cm}
+		
+		\begin{flushright}
+			\textbf{Autor:} \\[0.2cm]
+			Dominik Fischer 164176 \\
+			Oliwer Miller
+		\end{flushright}
+		
+		\vspace{2cm}
+		Rok akademicki 2024/2025
+	\end{center}
+	
+
+	
+	\newpage
+	
+	\titleformat{\section}{\Huge\bfseries}{\thesection}{2em}{}
+	
+	\section*{\textcolor{blue}{Wprowadzenie}}
+	
+	Tutaj piszemy wprowadzenie
+	
+	\titleformat{\section}{\Large\bfseries}{\thesection}{2em}{}
+	\section*{\textcolor{blue}{Selection Sort}}
+	\begin{multicols}{2}
+		\noindent Tutaj opis algorytmu
+		
+		\noindent 
+		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
+			\textcolor{white}{\textbf{\textsf{Terminal}}}\\
+			
+			\begin{lstlisting}[language=Python]
+def selection_sort(data):
+	n=len(data)
+	for j in range(n-1):
+		min = j
+		for i in range(j+1, n):
+			if data[i] < data[min]:
+				min = i
+		data[j], data[min] = data[min], data[j]
+	return data
+			\end{lstlisting}
+			
+		\end{tcolorbox}
+	\end{multicols}
+	
+	\section*{\textcolor{blue}{Insertion Sort}}
+	\begin{multicols}{2}
+		\noindent Tutaj opis algorytmu
+		
+		\noindent 
+		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
+			\textcolor{white}{\textbf{\textsf{Terminal}}}\\
+			
+			\begin{lstlisting}[language=Python]
+def insertion_sort (data):
+	for i in range(1, len(data)):
+		key = data[i]
+		j = i - 1
+		while j >= 0 and data[j] > key:
+			data[j + 1] = data[j]
+			j -= 1
+		data[j + 1] = key
+	return data
+			\end{lstlisting}
+			
+		\end{tcolorbox}
+	\end{multicols}
+	
+	\newpage
+	
+	\section*{\textcolor{blue}{shell Sort With Sadgewick Gaps}}
+	\begin{multicols}{2}
+		\noindent Tutaj opis algorytmu
+		
+		\noindent 
+		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
+			\textcolor{white}{\textbf{\textsf{Terminal}}}\\
+			
+			\begin{lstlisting}[language=Python]
+def sedgewick_gaps(n):
+	gaps = []
+	k = 0
+	while True:
+		if k % 2 == 0:
+			gap = 9 * (2 ** k) - 9 * (2 ** (k // 2)) + 1
+		else:
+			gap = 4 ** k + 3 * 2 ** (k - 1) + 1
+
+		if gap >= n:
+			break
+		gaps.append(gap)
+		k += 1
+
+	return gaps[::-1]
+
+def shell_sort(data):
+	n = len(data)
+	gaps = sedgewick_gaps(n)
+
+	for gap in gaps:
+		for i in range(gap, n):
+			temp = data[i]
+			j = i
+			while j >= gap and data[j - gap] > temp:
+				data[j] = data[j - gap]
+				j -= gap
+			data[j] = temp
+	return data
+			\end{lstlisting}
+			
+		\end{tcolorbox}
+	\end{multicols}
+	
+	\newpage
+	
+	\section*{\textcolor{blue}{Heap Sort}}
+	\begin{multicols}{2}
+		\noindent Tutaj opis algorytmu
+		
+		\noindent 
+		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
+			\textcolor{white}{\textbf{\textsf{Terminal}}}\\
+			
+			\begin{lstlisting}[language=Python]
+def heap(data,n,i):
+	largest=i
+	left = 2*i+1
+	right = 2*i+2
+
+	if left<n and data[left]>data[largest]:
+		largest = left
+	if right<n and data[right]>data[largest]:
+		largest=right
+	if largest !=i:
+		data[i], data[largest]=data[largest],data[i]
+		heap(data, n, largest)
+
+def heap_sort(data):
+	n = len(data)
+
+	for i in range(n // 2 - 1, -1, -1):  
+		heap(data, n, i)
+
+	for i in range(n - 1, 0, -1):
+		data[i], data[0] = data[0], data[i]
+		heap(data, i, 0)
+
+	return data
+			\end{lstlisting}
+			
+		\end{tcolorbox}
+	\end{multicols}
+	
+	\newpage
+	
+	\section*{\textcolor{blue}{Quick Sort Left Pivot}}
+	\begin{multicols}{2}
+		\noindent Tutaj opis algorytmu
+		
+		\noindent 
+		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
+			\textcolor{white}{\textbf{\textsf{Terminal}}}\\
+			
+			\begin{lstlisting}[language=Python]
+def partition(A, p, r):
+	pivot = A[p]
+	i = p+1
+	j = r
+
+	while True:
+		while i <= j and A[i] <= pivot:
+			i += 1
+		while i <= j and A[j] > pivot:
+			j -= 1
+		if i <= j:
+			A[i], A[j] = A[j], A[i]
+		else:
+			break
+
+	A[p], A[j] = A[j], A[p]
+	return j
+
+def quick_sort_left_pivot(A, p, r):
+	if p < r:
+		q = partition(A, p, r)
+		quick_sort_left_pivot(A, p, q-1)
+		quick_sort_left_pivot(A, q+1, r)
+	return A
+			\end{lstlisting}
+			
+		\end{tcolorbox}
+	\end{multicols}
+	
+	\newpage
+	
+	\section*{\textcolor{blue}{Quick Sort Random Pivot}}
+	\begin{multicols}{2}
+		\noindent Tutaj opis algorytmu
+		
+		\noindent 
+		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
+			\textcolor{white}{\textbf{\textsf{Terminal}}}\\
+			
+			\begin{lstlisting}[language=Python]
+def quick_sort_random_pivot(data):
+	if len(data) <= 1:
+		return data
+
+	pivot_index = random.randint(0, len(data) - 1)
+	pivot = data[pivot_index]
+
+	left = []
+	middle = []
+	right = []
+
+	for i, x in enumerate(data):
+		if i == pivot_index:
+			middle.append(x)
+		elif x < pivot:
+			left.append(x)
+		elif x > pivot:
+			right.append(x)
+
+	return quick_sort_random_pivot(left) + middle + quick_sort_random_pivot(right)
+
+			\end{lstlisting}
+			
+		\end{tcolorbox}
+	\end{multicols}
+	
+	\newpage
+	
 	%\section*{WYKRESY}
 	%Wykresy, obrazy itd, warto opakowywać w `figure`, dzięki czemu można dodać Caption\Opis do figury, jak i `label` dzięki któremu później można odwoływać się do figur np. ``
 	
 	
+	\section*{\textcolor{blue}{Porównanie czasów wykonania}}
 	\begin{figure}[H]
 		\centering
-		\label{fig:enter-label}
 		%Tworzę "pojemnik" na wykres `pgfplots` tak żeby automatycznie wyskalował mi wygenerowany wykres na szerokość strony. 
 		\noindent\resizebox{\textwidth}{!}{
 			\begin{tikzpicture}
@@ -34,7 +357,7 @@
 					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_constant_array.csv};
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_increasing_array.csv};
-					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_random_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_random_array.csv};
 					\legend{A shaped, Constant, Decresing, Incresing, Random}
 				\end{axis}
 				
@@ -52,7 +375,7 @@
 					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_constant_array.csv};
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_increasing_array.csv};
-					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_random_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_random_array.csv};
 					\legend{A shaped, Constant, Decresing, Incresing, Random}
 				\end{axis}
 				
@@ -70,7 +393,7 @@
 					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_constant_array.csv};
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_increasing_array.csv};
-					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_random_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_random_array.csv};
 					\legend{A shaped, Constant, Decresing, Incresing, Random}
 				\end{axis}
 				%Czwarty wykres
@@ -86,7 +409,7 @@
 					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_constant_array.csv};
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_increasing_array.csv};
-					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_random_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_random_array.csv};
 					\legend{A shaped, Constant, Decresing, Incresing, Random}
 				\end{axis}
 				
@@ -106,7 +429,7 @@
 					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_a_shaped_array.csv};
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_increasing_array.csv};
-					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_random_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_random_array.csv};
 					\legend{A shaped, Constant, Decresing, Incresing, Random}
 				\end{axis}
 				%Szosty wykres
@@ -122,17 +445,124 @@
 					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_constant_array.csv};
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_increasing_array.csv};
-					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_random_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_random_array.csv};
 					\legend{A shaped, Constant, Decresing, Incresing, Random}
 				\end{axis}
 				
 			\end{tikzpicture}
 		}
-		\caption{Caption}
 	\end{figure}
 	
 	
 	
+	
+	
+	\section*{\textcolor{blue}{Porównanie czasów wykonania poszczególnych algorytmów względem danych}}
+	\begin{figure}[H]
+		\centering
+		\label{fig:enter-label}
+		%Tworzę "pojemnik" na wykres `pgfplots` tak żeby automatycznie wyskalował mi wygenerowany wykres na szerokość strony. 
+		\noindent\resizebox{\textwidth}{!}{
+			\begin{tikzpicture}
+				\begin{axis}[%
+					name=plotA, anchor=left of south west,
+					title={A shaped}, 
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_a_shaped_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_a_shaped_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_a_shaped_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_a_shaped_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_a_shaped_array.csv};
+					\addplot[gray, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_a_shaped_array.csv};
+					\legend{Heap Sort, Insertion Sort, Shell Sort, Selection Sort, Quick Sort Random, Quick Sort Left}
+				\end{axis}
+				
+				
+				%Prawy górny
+				\begin{axis}[%
+					title={Constant}, 
+					name=plotB, at=(plotA.right of south east), anchor=left of south west,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_constant_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_constant_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_constant_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_constant_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_constant_array.csv};
+					\addplot[gray, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_constant_array.csv};
+					\legend{Heap Sort, Insertion Sort, Shell Sort, Selection Sort, Quick Sort Random, Quick Sort Left}
+				\end{axis}
+				
+				
+				%Trzeci wykres
+				\begin{axis}[%
+					title={Decresing}, 
+					name=plotD, at=(plotB.below south west), anchor=above north west,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_decreasing_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_decreasing_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_decreasing_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_decreasing_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_decreasing_array.csv};
+					\addplot[gray, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_decreasing_array.csv};
+					\legend{Heap Sort, Insertion Sort, Shell Sort, Selection Sort, Quick Sort Random, Quick Sort Left}
+				\end{axis}
+				%Czwarty wykres
+				\begin{axis}[%
+					title={Increasing}, 
+					name=plotC, at=(plotD.left of south west), anchor=right of south east,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_increasing_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_increasing_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_increasing_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_increasing_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_increasing_array.csv};
+					\addplot[gray, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_increasing_array.csv};
+					\legend{Heap Sort, Insertion Sort, Shell Sort, Selection Sort, Quick Sort Random, Quick Sort Left}
+				\end{axis}
+				
+				
+				
+				
+				%Piaty wykres
+				\begin{axis}[%
+					title={Random}, 
+					name=plotF, at=(plotC.below south), anchor=above north west,
+					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
+					xmode = log, log basis x={2},
+					every axis plot post/.style={very thick},
+					/tikz/plot label/.style={black, anchor=west}
+					]
+					\addplot[red, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_random_array.csv};
+					\addplot[green, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_random_array.csv};
+					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_random_array.csv};
+					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_random_array.csv};
+					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_random_array.csv};
+					\addplot[gray, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_random_array.csv};
+					\legend{Heap Sort, Insertion Sort, Shell Sort, Selection Sort, Quick Sort Random, Quick Sort Left}
+				\end{axis}
+				
+				
+			\end{tikzpicture}
+		}
+	\end{figure}
+	\section*{\textcolor{blue}{Wnioski}}
+	Tutaj dajemy wnioski
 	
 	
 \end{document}
