@@ -107,7 +107,7 @@
 		\begin{flushright}
 			\textbf{Autor:} \\[0.2cm]
 			Dominik Fischer 164176 \\
-			Oliwer Miller
+			Oliwer Miller 163544
 		\end{flushright}
 		
 		\vspace{2cm}
@@ -127,7 +127,8 @@
 	\titleformat{\section}{\Large\bfseries}{\thesection}{2em}{}
 	\section*{\textcolor{blue}{Selection Sort}}
 	\begin{multicols}{2}
-		\noindent Tutaj opis algorytmu
+		\noindent Zamysłem danego algorytmu jest po kolei \\wyszukiwanie najmniejszych elementów w tablicy. \\Na początku pierwszy element jest uznawany za \\najmniejszy, następnie wyszukiwany jest rzeczywisty najmniejszy element i zamieniany miejscem z \\początkowym. Wtedy lewa część tablicy staje się \\częścią posortowaną, a działanie jest kontynuowane do końca tablicy. \\
+		\\Złożoność czasowa algorytmu: O($n^2$)
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -150,7 +151,7 @@ def selection_sort(data):
 	
 	\section*{\textcolor{blue}{Insertion Sort}}
 	\begin{multicols}{2}
-		\noindent Tutaj opis algorytmu
+		\noindent Pętla \textit{for} zaczyna iterację od drugiego elementu,\\ ponieważ pierwszy uznaje wstępnie za posortowany. Algorytm porównuje kolejno elementy \textit{key} z \\elementami w posortowanej części po lewej stronie, następnie, przy użyciu pętli \textit{while}, po kolei zamienia elementy miejscami, dopóki dany element nie znajdzie się na odpowiedniej pozycji.\\ \\Złożoność czasowa algorytmu: \\ Najgorszy przypadek: O($n^2$) - lista malejąca \\Najlepszy przypadek: O(n) - lista posortowana \\ Średni przypadek: O($n^2$) - losowe dane
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -173,9 +174,10 @@ def insertion_sort (data):
 	
 	\newpage
 	
-	\section*{\textcolor{blue}{shell Sort With Sadgewick Gaps}}
+	\section*{\textcolor{blue}{Shell Sort With Sadgewick Gaps}}
 	\begin{multicols}{2}
-		\noindent Tutaj opis algorytmu
+		\noindent Dwie funkcje są użyte do tego algorytmu. Funkcja \\ \textit{sedgewick gaps} jest odpowiedzialna za stworzenie \\odstępów używanych do sortowania. Pętla \textit{while} \\tworzy odstępy w zależności od parzystości zmiennej \textit{k}, które są później zapisywane w liście \textit{gaps}. \\Funkcja \textit{shell sort} wykorzystuje odstępy zwrócone przez poprzednią funkcję do porównywania i zamiany miejscami elementów ciągu w danych odstępach od \\siebie. \\
+		\\Złożoność czasowa algorytmu: \\Najgorszy przypadek: O($n^{\frac{3}{2}}$) - lista malejąca \\Najlepszy przypadek: O(n log n) - ciąg prawie posortowany \\Średni przypadek: O($n^{\frac{4}{3}}$) - losowe dane
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -220,7 +222,8 @@ def shell_sort(data):
 	
 	\section*{\textcolor{blue}{Heap Sort}}
 	\begin{multicols}{2}
-		\noindent Tutaj opis algorytmu
+		\noindent Algorytm wykorzystuje do działania drzewo max heap, w którym, z zasady, największy element znajduje się na samej górze i rodzice mają większą wartość niż \\dzieci. Funkcja \textit{heap} jest odpowiedzialna za budowę kopca. Zmienne \textit{left} i \textit{right} to indeksy dzieci. \\Elementy kopca są ze sobą porównywane, potem \\następuje rekurencyjne wywołanie funkcji, aby \\uporządkować poddrzewa. \\
+		Funkcja \textit{heap sort} wykorzystuje funkcję \textit{heap} do \\konstrukcji drzewa, dodatkowo zamienia korzeń drzewa ze skrajnym liściem, tak ustawia najwiekszy element w części posortowanej, następnie wywołuje funkcję \textit{heap} ponownie.\\ \\Złozoność czasowa algorytmu: O(n log n)
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -260,7 +263,8 @@ def heap_sort(data):
 	
 	\section*{\textcolor{blue}{Quick Sort Left Pivot}}
 	\begin{multicols}{2}
-		\noindent Tutaj opis algorytmu
+		\noindent W tym algorytmie pierwszy element jest wybierany \\jako pivot. Funckja \textit{partition} dzieli tablicę, dzięki zmiennym \textit{i} oraz \textit{j} dzieli tablicę na część mniejszą \\i większą od pivota. \\Funckja \textit{quick sort left pivot} rekurencyjnie sortuje i następnie zwraca podstablice.\\
+		Złożoność czasowa algorytmu: \\ \\Najgorszy przypadek: O($n^2$) \\Najlepszy przypadek: O(n log n) \\ Średni przypadek: O(n log n)
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -300,7 +304,8 @@ def quick_sort_left_pivot(A, p, r):
 	
 	\section*{\textcolor{blue}{Quick Sort Random Pivot}}
 	\begin{multicols}{2}
-		\noindent Tutaj opis algorytmu
+		\noindent W tym algorytmie pivot jest wybierany losowo. \\Dany ciąg jest dzielony na trzy podtablice w \\zależności od wielkości elementów w porównaniu do pivota. Na końcu następuje rekurencyjne wywołanie funkcji na podtablicach.
+		\\Złożoność czasowa algorytmu: \\ Najgorszy przypadek: O($n^2$) \\Najlepszy przypadek: O(n log n) \\ Średni przypadek: O(n log n)
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]

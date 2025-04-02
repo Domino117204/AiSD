@@ -29,6 +29,7 @@ def sedgewick_gaps(n):
         k += 1
 
     return gaps[::-1]
+# zoptymalizować tak żeby nie tworzyć listy gaps, tylko wgrać maksymalny gap do funkcji i później k zmniejszać o 1
 
 def shell_sort(data):
     n = len(data)
@@ -43,7 +44,7 @@ def shell_sort(data):
                 j -= gap
             data[j] = temp
     return data
-
+# zamiast używać temp to użyć funkcji swap, dzięki czemu nie potrzeba dodatkowej zmiennej do przechowywania 
 
 def selection_sort(data):
     n = len(data)
