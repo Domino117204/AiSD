@@ -86,7 +86,7 @@
 		\vspace{1cm}
 		
 		{\large Informatyka rok I semestr 2} \\[0.3cm]
-		L10, Piątek 0:00 - 0:00
+		L10, Piątek 11:45 - 13:15
 		
 		\vspace{1.5cm}
 		
@@ -122,7 +122,7 @@
 	
 	\section*{\textcolor{blue}{Wprowadzenie}}
 	
-	Tutaj piszemy wprowadzenie
+	W projekcie opracowaliśmy sześć różnych algorytmów sortowania. Naszym celem była ich implementacja, opis, analiza i porównanie ich wydajności. Przeprowadziliśmy pomiary czasowe każdego z nich dla róznych danych wejściowych o różnych rozmiarach. Opracowane algorytmy sortowania to: Selection Sort, Insertion Sort, Shell Sort, Heap Sort, Quick sort dla lewego pivota i dla losowo wybranego pivota.
 	
 	\titleformat{\section}{\Large\bfseries}{\thesection}{2em}{}
 	\section*{\textcolor{blue}{Selection Sort}}
@@ -567,7 +567,7 @@ def quick_sort_random_pivot(data):
 		}
 	\end{figure}
 	\section*{\textcolor{blue}{Wnioski}}
-	Tutaj dajemy wnioski
+	Teoretycznie algorytm Heap Sort cechuje się najlepszą złożonością czasową wynoszącą O(n log n) niezależnie od przypadku. Algorytmy Selection Sort i Insertion Sort, których złożoność czasowa wynosi O($n^2$) lepiej się sprawdzają przy niewielkich zbiorach danych, przy większych zbiorach ich czas wykonania drastycznie wzrasta. Algorytmy ze złożonością czasową równą O(n log n) generalnie lepiej się sprawdziły w pomiarach czasu wykonania, również przy większych zbiorach danych, a są to algorytmy: Heap Sort, Shell Sort, Quick Sort Random Pivot oraz Quick Sort Left Pivot oprócz rosnących i malejących danych. Biorąc pod uwagę Quick Sort z losowym pivotem, jego wykres oscyluje właśnie ze względu na pivot, który jest losowo wybranym elementem. Mimo tego jest on generalnie bardziej efektywny niż Quick Sort z lewym pivotem. \\Podsumowując, w większości przypadków najlepszym algorytmem jest Quick Sort Random Pivot, dla zbiorów danych o średniej wielkości, można również zastosować Shell Sort, jednak kiedy zbiór jest nieliczny i prawie posortowany, można również wziąć pod uwagę algorytmy Insertion Sort i Selection Sort.
 	
 	
 \end{document}
