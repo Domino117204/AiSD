@@ -363,7 +363,7 @@ def quick_sort_random_pivot(data):
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_increasing_array.csv};
 					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/heap_sort_random_array.csv};
-					\legend{A shaped, Constant, Decresing, Incresing, Random}
+					\legend{A shaped, Constant, Decreasing, Incresing, Random}
 				\end{axis}
 				
 				
@@ -381,9 +381,8 @@ def quick_sort_random_pivot(data):
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_increasing_array.csv};
 					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/insertion_sort_random_array.csv};
-					\legend{A shaped, Constant, Decresing, Incresing, Random}
+					\legend{A shaped, Constant, Decreasing, Incresing, Random}
 				\end{axis}
-				
 				
 				%Trzeci wykres
 				\begin{axis}[%
@@ -399,7 +398,7 @@ def quick_sort_random_pivot(data):
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_increasing_array.csv};
 					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/selection_sort_random_array.csv};
-					\legend{A shaped, Constant, Decresing, Incresing, Random}
+					\legend{A shaped, Constant, Decreasing, Incresing, Random}
 				\end{axis}
 				%Czwarty wykres
 				\begin{axis}[%
@@ -415,7 +414,7 @@ def quick_sort_random_pivot(data):
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_increasing_array.csv};
 					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/shell_sort_random_array.csv};
-					\legend{A shaped, Constant, Decresing, Incresing, Random}
+					\legend{A shaped, Constant, Decreasing, Incresing, Random}
 				\end{axis}
 				
 				
@@ -435,7 +434,7 @@ def quick_sort_random_pivot(data):
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_increasing_array.csv};
 					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_left_pivot_random_array.csv};
-					\legend{A shaped, Constant, Decresing, Incresing, Random}
+					\legend{A shaped, Constant, Decreasing, Incresing, Random}
 				\end{axis}
 				%Szosty wykres
 				\begin{axis}[%
@@ -451,7 +450,7 @@ def quick_sort_random_pivot(data):
 					\addplot[blue, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_decreasing_array.csv};
 					\addplot[yellow, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_increasing_array.csv};
 					\addplot[black, dashed, smooth] table[x=InputSize,y=Time,meta=Algorithm,col sep=comma] {results/quick_sort_random_pivot_random_array.csv};
-					\legend{A shaped, Constant, Decresing, Incresing, Random}
+					\legend{A shaped, Constant, Decreasing, Incresing, Random}
 				\end{axis}
 				
 			\end{tikzpicture}
@@ -508,7 +507,7 @@ def quick_sort_random_pivot(data):
 				
 				%Trzeci wykres
 				\begin{axis}[%
-					title={Decresing}, 
+					title={Decreasing}, 
 					name=plotD, at=(plotB.below south west), anchor=above north west,
 					xlabel={Rozmiar instancji}, ylabel={Czas(ms)}, legend pos=north west,
 					xmode = log, log basis x={2},
