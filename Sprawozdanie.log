@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.19)  3 APR 2025 15:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.19)  3 APR 2025 15:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1091,7 +1091,7 @@ Here is how much of TeX's memory you used:
  50342 multiletter control sequences out of 15000+600000
  607224 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,21n,101p,1222b,2232s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,21n,101p,1350b,2232s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/oliwe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Users/oliwe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/oliwe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
@@ -1104,7 +1104,7 @@ Users/oliwe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C
 :/Users/oliwe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 :/Users/oliwe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:
 /Users/oliwe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Sprawozdanie.pdf (8 pages, 346052 bytes).
+Output written on Sprawozdanie.pdf (8 pages, 345144 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -177,7 +177,7 @@ def insertion_sort (data):
 	\section*{\textcolor{blue}{Shell Sort With Sadgewick Gaps}}
 	\begin{multicols}{2}
 		\noindent Dwie funkcje są użyte do tego algorytmu. Funkcja \\ \textit{sedgewick gaps} jest odpowiedzialna za stworzenie \\odstępów używanych do sortowania. Pętla \textit{while} \\tworzy odstępy w zależności od parzystości zmiennej \textit{k}, które są później zapisywane w liście \textit{gaps}. \\Funkcja \textit{shell sort} wykorzystuje odstępy zwrócone przez poprzednią funkcję do porównywania i zamiany miejscami elementów ciągu w danych odstępach od \\siebie. \\
-		\\Złożoność czasowa algorytmu: \\Najgorszy przypadek: O($n^{\frac{3}{2}}$) - lista malejąca \\Najlepszy przypadek: O(n log n) - ciąg prawie posortowany \\Średni przypadek: O($n^{\frac{4}{3}}$) - losowe dane
+		\\Złożoność czasowa algorytmu: \\Najgorszy przypadek: O($n^2$) - lista malejąca \\Najlepszy przypadek: O(n $\log_2 n$) - ciąg prawie posortowany \\Średni przypadek: O($n^{\frac{5}{4}}$) - losowe dane
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -223,7 +223,7 @@ def shell_sort(data):
 	\section*{\textcolor{blue}{Heap Sort}}
 	\begin{multicols}{2}
 		\noindent Algorytm wykorzystuje do działania drzewo max heap, w którym, z zasady, największy element znajduje się na samej górze i rodzice mają większą wartość niż \\dzieci. Funkcja \textit{heap} jest odpowiedzialna za budowę kopca. Zmienne \textit{left} i \textit{right} to indeksy dzieci. \\Elementy kopca są ze sobą porównywane, potem \\następuje rekurencyjne wywołanie funkcji, aby \\uporządkować poddrzewa. \\
-		Funkcja \textit{heap sort} wykorzystuje funkcję \textit{heap} do \\konstrukcji drzewa, dodatkowo zamienia korzeń drzewa ze skrajnym liściem, tak ustawia najwiekszy element w części posortowanej, następnie wywołuje funkcję \textit{heap} ponownie.\\ \\Złozoność czasowa algorytmu: O(n log n)
+		Funkcja \textit{heap sort} wykorzystuje funkcję \textit{heap} do \\konstrukcji drzewa, dodatkowo zamienia korzeń drzewa ze skrajnym liściem, tak ustawia najwiekszy element w części posortowanej, następnie wywołuje funkcję \textit{heap} ponownie.\\ \\Złozoność czasowa algorytmu: O(n $\log_2 n$)
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -264,7 +264,7 @@ def heap_sort(data):
 	\section*{\textcolor{blue}{Quick Sort Left Pivot}}
 	\begin{multicols}{2}
 		\noindent W tym algorytmie pierwszy element jest wybierany \\jako pivot. Funckja \textit{partition} dzieli tablicę, dzięki zmiennym \textit{i} oraz \textit{j} dzieli tablicę na część mniejszą \\i większą od pivota. \\Funckja \textit{quick sort left pivot} rekurencyjnie sortuje i następnie zwraca podstablice.\\
-		Złożoność czasowa algorytmu: \\ \\Najgorszy przypadek: O($n^2$) \\Najlepszy przypadek: O(n log n) \\ Średni przypadek: O(n log n)
+		Złożoność czasowa algorytmu: \\ \\Najgorszy przypadek: O($n^2$) \\Najlepszy przypadek: O(n $\log_2 n$) \\ Średni przypadek: O(n $\log_2 n$)
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -305,7 +305,7 @@ def quick_sort_left_pivot(A, p, r):
 	\section*{\textcolor{blue}{Quick Sort Random Pivot}}
 	\begin{multicols}{2}
 		\noindent W tym algorytmie pivot jest wybierany losowo. \\Dany ciąg jest dzielony na trzy podtablice w \\zależności od wielkości elementów w porównaniu do pivota. Na końcu następuje rekurencyjne wywołanie funkcji na podtablicach.
-		\\Złożoność czasowa algorytmu: \\ Najgorszy przypadek: O($n^2$) \\Najlepszy przypadek: O(n log n) \\ Średni przypadek: O(n log n)
+		\\Złożoność czasowa algorytmu: \\ Najgorszy przypadek: O($n^2$) \\Najlepszy przypadek: O(n $\log_2 n$) \\ Średni przypadek: O(n $\log_2 n$)
 		
 		\noindent 
 		\begin{tcolorbox}[colback=black,colframe=gray!50!,arc=3mm,boxrule=0pt,left=0pt,right=0pt,width=\linewidth]
@@ -567,7 +567,7 @@ def quick_sort_random_pivot(data):
 		}
 	\end{figure}
 	\section*{\textcolor{blue}{Wnioski}}
-	Teoretycznie algorytm Heap Sort cechuje się najlepszą złożonością czasową wynoszącą O(n log n) niezależnie od przypadku. Algorytmy Selection Sort i Insertion Sort, których złożoność czasowa wynosi O($n^2$) lepiej się sprawdzają przy niewielkich zbiorach danych, przy większych zbiorach ich czas wykonania drastycznie wzrasta. Algorytmy ze złożonością czasową równą O(n log n) generalnie lepiej się sprawdziły w pomiarach czasu wykonania, również przy większych zbiorach danych, a są to algorytmy: Heap Sort, Shell Sort, Quick Sort Random Pivot oraz Quick Sort Left Pivot oprócz rosnących i malejących danych. Biorąc pod uwagę Quick Sort z losowym pivotem, jego wykres oscyluje właśnie ze względu na pivot, który jest losowo wybranym elementem. Mimo tego jest on generalnie bardziej efektywny niż Quick Sort z lewym pivotem. \\Podsumowując, w większości przypadków najlepszym algorytmem jest Quick Sort Random Pivot, dla zbiorów danych o średniej wielkości, można również zastosować Shell Sort, jednak kiedy zbiór jest nieliczny i prawie posortowany, można również wziąć pod uwagę algorytmy Insertion Sort i Selection Sort.
+	Jeśli chodzi o stabilność algorytmów, tylko Insertion Sort jest algorytmem stabilnym. \\Analizując złożoność czasową, teoretycznie algorytm Heap Sort cechuje się najlepszą złożonością czasową wynoszącą O(n log n) niezależnie od przypadku. Algorytmy Selection Sort i Insertion Sort, których złożoność czasowa wynosi O($n^2$) lepiej się sprawdzają przy niewielkich zbiorach danych, przy większych zbiorach ich czas wykonania drastycznie wzrasta. Algorytmy ze złożonością czasową równą O(n log n) generalnie lepiej się sprawdziły w pomiarach czasu wykonania, również przy większych zbiorach danych, a są to algorytmy: Heap Sort, Shell Sort, Quick Sort Random Pivot oraz Quick Sort Left Pivot oprócz rosnących i malejących danych. Biorąc pod uwagę Quick Sort z losowym pivotem, jego wykres oscyluje właśnie ze względu na pivot, który jest losowo wybranym elementem. Mimo tego jest on generalnie bardziej efektywny niż Quick Sort z lewym pivotem. \\Podsumowując, w większości przypadków najlepszym algorytmem jest Quick Sort Random Pivot, dla zbiorów danych o średniej wielkości, można również zastosować Shell Sort, jednak kiedy zbiór jest nieliczny i prawie posortowany, można również wziąć pod uwagę algorytmy Insertion Sort i Selection Sort.
 	
 	
 \end{document}
