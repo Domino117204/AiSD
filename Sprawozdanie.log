@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.25)  3 APR 2025 16:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.19)  3 APR 2025 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./Sprawozdanie.tex
 (Sprawozdanie.tex
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+LaTeX2e <2024-11-01>
+L3 programming layer <2024-11-02>
 (C:\Users\domin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
 (C:\Users\domin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
@@ -34,7 +34,7 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 (C:\Users\domin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count270
 \Gm@cntv=\count271
@@ -717,7 +717,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \@envbody=\toks47
 )
 (C:\Users\domin\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count320
 )
 \tcb@titlebox=\box115
@@ -989,6 +989,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-51.5179pt}.
 
 [5]
+Underfull \hbox (badness 10000) in paragraph at lines 307--309
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
@@ -1071,7 +1076,7 @@ PGFPlots: reading {results/quick_sort_left_pivot_random_array.csv}
 
 File: Image/PP-PUT-WORD.png Graphic file (type png)
 <use Image/PP-PUT-WORD.png>
-Package pdftex.def Info: Image/PP-PUT-WORD.png  used on input line 569.
+Package pdftex.def Info: Image/PP-PUT-WORD.png  used on input line 568.
 (pdftex.def)             Requested size: 284.52756pt x 59.91786pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1085,7 +1090,7 @@ c}]
 
 File: Image/PP-PUT-WORD.png Graphic file (type png)
 <use Image/PP-PUT-WORD.png>
-Package pdftex.def Info: Image/PP-PUT-WORD.png  used on input line 573.
+Package pdftex.def Info: Image/PP-PUT-WORD.png  used on input line 572.
 (pdftex.def)             Requested size: 284.52756pt x 59.91786pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1096,18 +1101,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8] (Sprawozdanie.aux)
  ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+LaTeX2e <2024-11-01>
+L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 28557 strings out of 473523
- 720317 string characters out of 5714630
- 1513119 words of memory out of 5000000
- 51301 multiletter control sequences out of 15000+600000
- 607992 words of font info for 60 fonts, out of 8000000 for 9000
+ 28553 strings out of 473682
+ 720323 string characters out of 5719215
+ 1511169 words of memory out of 5000000
+ 51153 multiletter control sequences out of 15000+600000
+ 607224 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,21n,101p,1350b,2238s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,21n,101p,1350b,2232s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
@@ -1120,7 +1125,7 @@ Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C
 :/Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 :/Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:
 /Users/domin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Sprawozdanie.pdf (8 pages, 345180 bytes).
+Output written on Sprawozdanie.pdf (8 pages, 345166 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
